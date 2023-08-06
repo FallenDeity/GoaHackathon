@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import React from "react";
 
 import About from "@/components/About";
@@ -5,6 +6,9 @@ import ContactForm from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Pets from "@/components/Pets";
+import { meta } from "@/lib/constants";
+
+export const metadata: Metadata = meta;
 
 export default function Home(): React.JSX.Element {
 	return (

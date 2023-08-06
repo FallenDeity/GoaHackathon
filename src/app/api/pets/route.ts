@@ -1,3 +1,4 @@
+import { faker } from "@faker-js/faker";
 import { NextResponse } from "next/server";
 
 import { sanityClient } from "@/lib/sanity.client";
@@ -9,6 +10,7 @@ interface PetParams {
 	description: string;
 	marker: string;
 	tags: {
+		_key: string;
 		tag: string;
 		color: string;
 	}[];
@@ -18,6 +20,9 @@ export async function POST(request: Request): Promise<NextResponse> {
 	try {
 		const pet = (await request.json()) as PetParams;
 		pet._type = "pet";
+		for (const tag of pet.tags) {
+			tag._key = faker.string.uuid();
+		}
 		await sanityClient.create(pet);
 		return new NextResponse(
 			JSON.stringify({

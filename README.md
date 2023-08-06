@@ -1,4 +1,22 @@
+<p align="center"><img src="./public/logo.png" alt="Logo" width="300" height="300"></p>
+<h1 align="center">Animania</h1>
+<h4 align="center">Animania is a platform that aims to empower stray animals with care, love, and forever homes.</h4>
+
+# Features
+
+- [x] Responsive and mobile friendly UI.
+- [x] Dark and light mode.
+- [x] Sanity (CMS) Integration.
+- [x] Contact using SMTP Email Server.
+- [x] REST API for CRUD operations.
+- [x] Realtime updates.
+- [x] Google Map integration.
+
 # Demo
+
+![Demo](./public/demo.gif)
+
+# Production
 
 https://goa-hackathon-nine.vercel.app
 

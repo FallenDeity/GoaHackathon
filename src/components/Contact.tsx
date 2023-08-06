@@ -46,18 +46,19 @@ export function ContactForm(): React.JSX.Element {
 			return;
 		}
 		setLoading(true);
+		emailjs.init(String(process.env.NEXT_PUBLIC_EMAILJS_USER_ID));
 		emailjs
 			.send(
-				String(process.env.EMAILJS_SERVICE_ID),
-				String(process.env.EMAILJS_TEMPLATE_ID),
+				String(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID),
+				String(process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID),
 				{
 					from_name: form.name,
-					to_name: "Pranav Menon",
+					to_name: "Triyan Mukherjee",
 					from_email: form.email,
-					to_email: "pranav2408dhruv@gmail.com",
+					to_email: "triyanmukherjee@gmail.com",
 					message: form.message,
 				},
-				String(process.env.EMAILJS_USER_ID)
+				String(process.env.NEXT_PUBLIC_EMAILJS_USER_ID)
 			)
 			.then(
 				() => {

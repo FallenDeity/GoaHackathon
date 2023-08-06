@@ -26,8 +26,8 @@ const ServiceCard = ({
 			whileInView="show"
 			viewport={{ once: true }}
 			variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-			className="violet-gradient w-full rounded-lg p-[1px] shadow-[0_35px_120px_-15px_#211e35]">
-			<div className="flex min-h-[350px] flex-col rounded-md bg-[#151030]">
+			className="violet-gradient w-full rounded-lg p-[1px] shadow-xl dark:shadow-gray-800">
+			<div className="flex min-h-[350px] flex-col rounded-md bg-[#eceaf9] dark:bg-[#151030]">
 				<Image
 					unoptimized
 					src={logo}
@@ -36,8 +36,8 @@ const ServiceCard = ({
 					width={64}
 					height={64}
 				/>
-				<h2 className="mt-4 text-center text-xl font-bold text-white">{name}</h2>
-				<p className="px-4 py-4 text-left text-xs leading-5 text-neutral-300">{description}</p>
+				<h2 className="mt-4 text-center text-xl font-bold">{name}</h2>
+				<p className="px-4 py-4 text-left text-xs leading-5">{description}</p>
 			</div>
 		</motion.div>
 	</div>
@@ -55,7 +55,7 @@ export function About(): React.JSX.Element {
 				whileInView="show"
 				viewport={{ once: true }}
 				variants={fadeIn("", "", 0.1, 1)}
-				className="mt-4 max-w-3xl text-[17px] leading-[30px] text-neutral-400">
+				className="mt-4 max-w-3xl text-[17px] leading-[30px]">
 				Animania's mission is to give stray animals a fresh start by providing a safe and caring environment,
 				finding them loving forever homes. Our platform aims to raise awareness about animal welfare and promote
 				responsible pet ownership in our community, envisioning a world where no stray animal is left uncared

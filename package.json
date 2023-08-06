@@ -1,7 +1,7 @@
 {
-	"name": "social-media-clone",
+	"name": "animania",
 	"version": "1.0.0",
-	"description": "An social media clone.",
+	"description": "Animania is a platform that aims to empower stray animals with care, love, and forever homes.",
 	"main": "src/index.ts",
 	"rootDir": "src",
 	"scripts": {
@@ -63,6 +63,8 @@
 		"@emailjs/browser": "^3.11.0",
 		"@radix-ui/react-dialog": "^1.0.4",
 		"@radix-ui/react-dropdown-menu": "^2.0.5",
+		"@radix-ui/react-label": "^2.0.2",
+		"@radix-ui/react-slot": "^1.0.2",
 		"@sanity/client": "^6.4.0",
 		"@sanity/image-url": "^1.0.2",
 		"@sanity/vision": "^3.14.5",

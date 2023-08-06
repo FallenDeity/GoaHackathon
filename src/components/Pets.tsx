@@ -29,7 +29,7 @@ const PetCard = ({ pet, index }: { pet: Pet; index: number }): React.JSX.Element
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true }}>
-			<div className="w-72 cursor-pointer rounded-xl bg-secondary shadow-md duration-500 hover:scale-105 hover:shadow-xl dark:shadow-gray-700">
+			<div className="w-72 cursor-pointer rounded-xl bg-[#eceaf9] shadow-xl duration-500 hover:scale-105 hover:shadow-xl dark:bg-[#151030] dark:shadow-gray-800">
 				<div>
 					<Image
 						unoptimized
@@ -47,7 +47,7 @@ const PetCard = ({ pet, index }: { pet: Pet; index: number }): React.JSX.Element
 							<Avatar name={pet.name} size="30" className="mr-3 rounded-full text-xs" />
 							{pet.name}
 						</p>
-						<span className="line-clamp-3 text-sm">{pet.description}</span>
+						<span className="my-1 line-clamp-3 text-sm">{pet.description}</span>
 						<div className="flex items-center border-t text-neutral-600 dark:border-gray-700 dark:text-neutral-200">
 							<p className="my-3 cursor-auto">
 								{pet.tags.slice(0, 3).map((tag, index) => (
@@ -71,7 +71,7 @@ const PetCard = ({ pet, index }: { pet: Pet; index: number }): React.JSX.Element
 												<iframe
 													loading="lazy"
 													className="h-[350px] w-full object-cover"
-													src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d2701.9215859942947!2d8.5410422!3d47.3744489!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDfCsDIyJzI4LjAiTiA4wrAzMicyNy44IkU!5e0!3m2!1sen!2sin!4v1691326745620!5m2!1sen!2sin"
+													src={pet.marker}
 												/>
 											</DialogDescription>
 										</DialogHeader>

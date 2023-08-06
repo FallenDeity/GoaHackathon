@@ -93,7 +93,12 @@ export default function Navbar(): React.JSX.Element {
 						<DropdownMenuContent className="mr-3 md:hidden">
 							<DropdownMenuGroup>
 								{navLinks.map((link) => (
-									<DropdownMenuItem key={link.title}>
+									<DropdownMenuItem
+										key={link.title}
+										onClick={(): void => {
+											router.push(link.id);
+											setActive(link.title);
+										}}>
 										{link.title}
 										<DropdownMenuShortcut>
 											<link.icon size={15} />

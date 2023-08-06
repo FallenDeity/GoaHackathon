@@ -48,3 +48,23 @@ export const Abouts = [
 		description: "Track and aid stray animals in real-time, ensuring their safety and rescue.",
 	},
 ];
+
+export const meta = {
+	title: "Animania",
+	metadataBase: new URL(String(process.env.NEXT_PUBLIC_BASE_URL)),
+	description: "Animania is a platform that aims to empower stray animals with care, love, and forever homes.",
+	keywords: ["Animals", "Adoption", "Stray", "Animal Welfare", "Animal Rights"],
+	authors: [{ name: "FallenDeity" }],
+	robots: {
+		follow: true,
+		index: false,
+		nocache: true,
+	},
+	openGraph: {
+		title: "Animania",
+		description: "Animania is a platform that aims to empower stray animals with care, love, and forever homes.",
+		images: "/logo.png",
+		type: "website",
+	},
+	themeColor: "#4011ad",
+};
