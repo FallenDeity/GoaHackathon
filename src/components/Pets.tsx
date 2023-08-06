@@ -37,17 +37,19 @@ const PetCard = ({ pet, index }: { pet: Pet; index: number }): React.JSX.Element
 						height={100}
 						src={pet.image}
 						alt="PET"
-						className="h-80 w-72 rounded-t-xl object-cover"
+						className="h-64 w-72 rounded-t-xl object-cover"
 					/>
-					<div className="w-72 space-y-3 px-4 pb-1 pt-3">
-						<span className="mr-3 text-xs uppercase text-neutral-500 dark:text-neutral-300">
-							<Moment fromNow>{pet._createdAt}</Moment>
-						</span>
-						<p className="flex w-full flex-row truncate text-lg font-bold capitalize">
-							<Avatar name={pet.name} size="30" className="mr-3 rounded-full text-xs" />
-							{pet.name}
-						</p>
-						<span className="my-1 line-clamp-3 text-sm">{pet.description}</span>
+					<div className="w-72 space-y-5 px-4 pb-1 pt-3">
+						<div className="my-3 flex w-full flex-row items-center justify-between">
+							<p className="text-md flex w-full flex-row items-center truncate font-bold capitalize">
+								<Avatar name={pet.name} size="30" className="mr-3 rounded-full text-xs" />
+								{pet.name}
+							</p>
+							<span className="whitespace-nowrap text-right text-[10px] text-neutral-500 dark:text-neutral-300">
+								<Moment fromNow>{pet._createdAt}</Moment>
+							</span>
+						</div>
+						<span className="line-clamp-3 text-sm">{pet.description}</span>
 						<div className="flex items-center border-t text-neutral-600 dark:border-gray-700 dark:text-neutral-200">
 							<p className="my-3 cursor-auto">
 								{pet.tags.slice(0, 3).map((tag, index) => (
