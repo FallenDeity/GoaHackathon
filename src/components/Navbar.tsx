@@ -55,7 +55,7 @@ export default function Navbar(): React.JSX.Element {
 						window.scrollTo(0, 0);
 					}}>
 					<Image
-						src={"/logo1.png"}
+						src={"/logo.png"}
 						width={50}
 						height={50}
 						alt="Logo"
